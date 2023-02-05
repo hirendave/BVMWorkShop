@@ -1,0 +1,83 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+      <style type="text/css">
+        p {
+          color:  red;
+        }
+
+        .cssClass {
+          font-size: 40px;
+        }
+
+        #myId {
+          font-size: 50px;
+        }
+
+        h1, h2 {
+          color:  darkseagreen;
+        }
+
+        div.cssClass {
+          color: orange;
+        }
+
+        div span {
+          background-color: yellow;
+        }
+
+        div > span {
+          background-color: yellow;
+        }
+
+        a:link {
+          color: #FF0000;
+        }
+
+        a:hover {
+          color: #FF00FF;
+        }
+
+      </style>
+      <link rel="stylesheet" type="text/css" href="styles.css">
+      <!--
+        Inline style
+        External and internal style sheets 
+        Browser default
+      -->
+  </head>
+  <body>
+    <p>This is a paragraph</p>
+    <div class="cssClass">
+      This is Div tag
+    </div>
+     <div id="myId">
+      This is Div with Id
+    </div>
+    <h1>This is Header 1</h1>
+    <h2>This is Header 2</h2>
+    <p style="color:purple;">This is a paragraph.</p>
+    <!--Combinators Descendant Selector-->
+    <div>
+        <span>
+          This is inner span 1
+        </span>
+        <span>
+          This is inner span 2
+        </span>
+    </div>
+    <span>This is outer span</span>
+    <!--Combinators Child Selector-->
+    <div>
+        <span>
+          This is inner span 1
+        </span>
+        <h3>
+          This is inner paragraph
+        </h3>
+    </div>
+    <!--Pseudo-classes-->
+    <a href="../HelloWorld.html">Anchor</a>
+  </body>
+</html>

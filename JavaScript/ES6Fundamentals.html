@@ -1,0 +1,85 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+      <script type="text/javascript">
+        //scope
+        let name = 'Sara';
+        {
+            let name = 'Peter';
+
+            console.log(name);
+        }
+        console.log(name);
+
+        //arrow functions
+        let sum = function(a, b) {
+           return a + b;
+        };
+        console.log(sum(1,3));
+
+        //classes
+        class Person {
+          constructor(name) {
+            this.name = name;
+          }
+        }
+
+        const person1 = new Person('John');
+
+        console.log(person1.name); // John
+
+        //default params
+        let sumWithDefault = function(a, b=5) {
+           return a + b;
+        };
+        console.log(sumWithDefault(1));
+
+        //template literals
+        const first_name = "Hiren";
+        const last_name = "Dave";
+        console.log('Hello ' + first_name + ' ' + last_name);
+
+        //Destructuring
+
+        const person = {
+            fullname: 'Hiren Dave',
+            age: 35,
+            gender: 'male'    
+        }
+
+        let { fullname, age, gender } = person;
+
+        console.log(fullname); // Hiren
+        console.log(age); // 35
+        console.log(gender); // male
+
+        //spread operator
+        let arr1 = ['one', 'two'];
+        let arr2 = [...arr1, 'three', 'four', 'five'];
+        console.log(arr2);
+
+        //promise
+        let promiseDef = new Promise(function(resolve, reject) {
+          let x = 5;
+          if (x == 0) {
+            resolve("OK");
+          } else {
+            reject("Error");
+          }
+        });
+
+        promiseDef.then(
+          function(value) {console.log(value);},
+          function(error) {console.log(error);}
+        );
+
+      </script>
+      <script type="module">
+        import {moduleFunction} from './myModule.js';
+        moduleFunction('Hiren');
+      </script>
+  </head>
+  <body>
+  </body>
+</html>

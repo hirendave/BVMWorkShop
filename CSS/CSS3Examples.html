@@ -1,0 +1,140 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+      <style type="text/css">
+        .box {
+            width: 300px;
+            height: 150px;
+            background: #ffb6c1;
+            border: 2px solid darkred;
+            border-radius: 20px;
+        }
+        .background {
+            width: 300px;
+            height: 150px;
+            border: 2px solid darkred;
+            background: url("./logo-02.jpg");
+            background-size: 100% 100%;
+            border-radius: 20px;
+        }
+        .gradient {
+            width: 300px;
+            height: 150px;
+            background: red;
+            background: -webkit-linear-gradient(red, green);
+            background: -ms-linear-gradient(red, green);
+            background: linear-gradient(red, green);
+        }
+        p {
+            width: 400px;
+            padding: 10px;
+            overflow: hidden;
+            white-space: nowrap;
+            background: #f2f2f2;
+        }
+        p.clipped {
+            text-overflow: clip;
+        }
+        p.ellipses {
+            text-overflow: ellipsis;
+        }
+        .shadow{
+            width: 200px;
+            height: 150px;
+            background: gray;
+            box-shadow: 5px 5px 10px #000;
+        }
+        .rotate {
+            width: 300px;
+            height: 150px;
+            background: yellow;
+            transform: rotate(20deg);
+        }
+        .scale {
+            width: 300px;
+            height: 150px;
+            background: yellow;
+            transform:  scale(1,2);
+        }
+        .skew {
+            width: 300px;
+            height: 150px;
+            background: yellow;
+            transform:  skew(20deg,20deg);
+        }
+        button {
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font: bold 18px sans-serif;
+            background: #fd7c2a;
+            -webkit-transition: background 5s; /* For Safari 3.0 to 6.0 */
+            transition: background 5s; /* For modern browsers */
+        }
+        button:hover {
+            background: #3cc16e;
+        }
+
+        .animate {
+            width: 300px;
+            height: 150px;
+            background: #ffb6c1;
+            position: relative;
+            /* Chrome, Safari, Opera */
+            -webkit-animation-name: moveit;
+            -webkit-animation-duration: 2s;
+            /* Standard syntax */
+            animation-name: moveit;
+            animation-duration: 2s;
+        }
+         
+        /* Chrome, Safari, Opera */
+        @-webkit-keyframes moveit {
+            from {left: 0;}
+            to {left: 50%;}
+        }
+         
+        /* Standard syntax */
+        @keyframes moveit {
+            from {left: 0;}
+            to {left: 50%;}
+        }
+        .flex-container {
+            width: 80%;
+            min-height: 300px;
+            margin: 0 auto;
+            font-size: 32px;
+            display: -webkit-flex; /* Safari */   
+            display: flex; /* Standard syntax */
+            border: 1px solid #808080;
+        }
+        .flex-container div {
+            padding: 10px;
+            background: #dbdfe5;
+            -webkit-flex: 1; /* Safari */
+            -ms-flex: 1; /* IE 10 */
+            flex: 1; /* Standard syntax */
+        }
+      </style>
+  </head>
+  <body>
+        <div class="box"></div>
+        <div class="background"></div>
+        <div class="gradient"></div>
+        <p class="clipped">This is long text.This is long text.This is long text.This is long text.This is long text.This is long text.This is long text.This is long text.This is long text.This is long text.</p>
+        <p class="ellipses">This is long text.This is long text.This is long text.This is long text.This is long text.This is long text.This is long text.This is long text.This is long text.This is long text.This is long text.This is long text.</p>
+        <div class="shadow">This is Div</div>
+        <br>
+        <div class="rotate">This is rotated Div</div>
+        <div class="scale">This is scaled Div</div>
+        <div class="skew">This is skewed Div</div>
+        <button type="button">On Hover will change color</button>
+        <div class="animate"></div>
+        <div class="flex-container">
+            <div class="item1">Item 1</div>
+            <div class="item2 bg-alt">Item 2</div>
+            <div class="item3">Item 3</div>
+        </div>
+  </body>
+</html>

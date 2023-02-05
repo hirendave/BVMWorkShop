@@ -1,0 +1,19 @@
+p {
+  color:  red;
+}
+
+.cssClass {
+  font-size: 40px;
+}
+
+#myId {
+  font-size: 50px;
+}
+
+h1, h2 {
+  color:  darkseagreen;
+}
+
+div.cssClass {
+  color: orange;
+}
